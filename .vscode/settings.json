@@ -1,0 +1,14 @@
+{
+    "cSpell.ignoreWords": [
+        "Uart",
+        "Veryl",
+        "Vivado",
+        "constrs",
+        "fileset",
+        "norecurse",
+        "simset",
+        "sysclk",
+        "ticsg",
+        "verilog"
+    ]
+}

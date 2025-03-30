@@ -1,0 +1,44 @@
+// clk_wiz.veryl
+// wrapper of generated clk_wiz_0
+module ClkWiz (
+    clk_in1 : input  `a clock,
+    clk_out1: output `b clock,
+    locked  : output `b logic,
+) {
+
+    // Clock domain `b is generated from domain `a
+    unsafe (cdc) {
+        inst clk_gen: $sv::clk_wiz_0 (
+            clk_in1    ,
+            clk_out1   ,
+            r#reset : 0,
+            locked     ,
+        );
+    }
+
+}
+
+// the generated clock wizard ip
+// clk_wiz_o.v
+// module clk_wiz_0
+//  (
+//   // Clock out ports
+//   output        clk_out1,
+//   // Status and control signals
+//   input         reset,
+//   output        locked,
+//   // Clock in ports
+//   input         clk_in1
+//  );
+//
+//   clk_wiz_0_clk_wiz inst
+//   (
+//   // Clock out ports
+//   .clk_out1(clk_out1),
+//   // Status and control signals
+//   .reset(reset),
+//   .locked(locked),
+//   // Clock in ports
+//   .clk_in1(clk_in1)
+//   );
+// endmodule
