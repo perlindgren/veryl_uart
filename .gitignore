@@ -1,0 +1,8 @@
+/dependencies
+/src/*.sv
+/src/*.sv.map
+/src/*.vcd
+*.f
+# xilinx specifics
+/xilinx_prj
+*.str
