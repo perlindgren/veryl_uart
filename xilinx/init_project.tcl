@@ -1,7 +1,5 @@
 # build the veryl project, note veryl currently outputs built files 
-set build [exec veryl build 2>&1]
-
-puts $build
+set build [exec veryl build 2>/dev/null]
 
 # Vivado in project mode is less bad, pick part here, we use arty a35t dev board
 create_project uart ../xilinx_prj -force -part xc7a35ticsg324-1L;

@@ -5,4 +5,10 @@
 *.f
 # xilinx specifics
 /xilinx_prj
+*.log
+*.jou
 *.str
+
+/xilinx/ip/*
+# xilinx/ip/clk_wiz_0.xci, is already tracked
+# git add -f for each new ip
